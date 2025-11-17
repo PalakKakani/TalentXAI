@@ -57,7 +57,7 @@ TalentX AI requires AWS services:
 
 * **S3 Bucket:** Store portfolios, voice recordings, and generated content.
 * **DynamoDB Table:** Store chat history and agent state.
-* **AWS Bedrock Agents (Optional):** For Multi-Agent Chatbot:
+* **AWS Bedrock Agents:** For Multi-Agent Chatbot:
 
   * Create **Master Agent** and **Sub-Agents** (Profile, Skill Mapping, Career Pathway, Portfolio).
   * Configure each agent with instructions to handle its role.
