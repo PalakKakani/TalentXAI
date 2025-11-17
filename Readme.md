@@ -1,8 +1,8 @@
-# Talent x AI
+# TalentX AI
 
 **An Interactive AI-Driven Career Exploration & Voice Assistant Platform**  
 
-**Talent x AI** is an immersive platform that empowers users to explore career paths, simulate day-to-day experiences, interact with AI-powered agents, and manage personal portfolios. With voice-enabled AI, 3D avatars, and real-time chat agents, SparkPath OS provides a unique, hands-on way to discover and shape your career journey.  
+**TalentX AI** is an immersive platform that empowers users to explore career paths, simulate day-to-day experiences, interact with AI-powered agents, and manage personal portfolios. With voice-enabled AI, 3D avatars, and real-time multi-agent chat, TalentX AI provides a hands-on way to discover and shape your career journey.
 
 ---
 
@@ -14,111 +14,72 @@
 - **Spark Hub:** Personalized space to explore tools, resources, and projects.  
 - **Portfolio Management:** Save conversation history, generated content, and HTML portfolios to AWS S3.  
 - **Audio Interaction:** Record and play back audio conversations with AI agents.  
-
----
-
-## Tech Stack
-
-- **Frontend:** Streamlit, HTML/CSS, 3D model viewer  
-- **Backend:** Python, AWS Bedrock, Amazon Polly, Amazon Transcribe, DynamoDB, S3  
-- **Voice Processing:** Streamlit Mic Recorder, PyDub, Wave  
-- **Other Libraries:** Pandas, NumPy, SciPy, BeautifulSoup4, Requests  
-
----
-# TalentX AI
-
-**An Interactive AI-Driven Career Exploration & Voice Assistant Platform**  
-
-**TalentX AI** is an immersive platform that empowers users to explore career paths, simulate day-to-day experiences, interact with AI-powered agents, and manage personal portfolios. With voice-enabled AI, 3D avatars, and multi-agent chat functionality, TalentX AI provides a hands-on way to discover and shape your career journey.
-
----
-
-## Features
-
-- **Avatar Selector:** Choose from multiple 3D avatars to represent yourself.  
-- **Voice & Text Career Copilot:** Converse with AI agents using text or voice input in the Multi-Agent Chatbot.  
-- **Day-in-the-Life Simulation:** Simulate real-world career scenarios.  
-- **Spark Hub:** Personalized space to explore tools, resources, and projects.  
-- **Portfolio Management:** Save conversation history, generated content, and HTML portfolios to AWS S3.  
-- **Audio Interaction:** Record and play back audio conversations with AI agents.  
+- **Multi-Agent Chatbot:** Master agent routes queries to sub-agents (Profile, Skill Mapping, Career Pathway, Portfolio).  
 
 ---
 
 ## Architecture
 
-![TalentX AI Architecture]([path_to_your_architecture_image.png](https://www.canva.com/design/DAG4-0eLrb8/XXjRdnT-jVfMJr1_I7esgg/view?utm_content=DAG4-0eLrb8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hba620a572b))  
+![TalentX AI Architecture](path_to_your_architecture_image.png)  
 
 ---
 
 ## Tech Stack
 
-| Layer                  | Technology / Tools                                                |
-|------------------------|------------------------------------------------------------------|
-| **Frontend**           | Streamlit, HTML/CSS, 3D model viewer                             |
-| **Backend**            | Python, AWS Bedrock, Amazon Polly, Amazon Transcribe             |
-| **Agents**             | Multi-Agent Architecture: Master Agent + Sub-Agents             |
-| **Database & Storage** | DynamoDB (Chat History & State), S3 (Portfolios + Voice Logs)   |
-| **Voice Processing**   | Streamlit Mic Recorder, PyDub, Wave                               |
-| **Other Libraries**    | Pandas, NumPy, SciPy, BeautifulSoup4, Requests                   |
+| Layer                | Technology / Libraries                               |
+|---------------------|------------------------------------------------------|
+| **Frontend**         | Streamlit, HTML/CSS, 3D Model Viewer               |
+| **Backend**          | Python, AWS Bedrock, Amazon Polly, Amazon Transcribe, DynamoDB, S3 |
+| **Voice Processing** | Streamlit Mic Recorder, PyDub, Wave                 |
+| **Data & Utils**     | Pandas, NumPy, SciPy, BeautifulSoup4, Requests     |
 
 ---
 
 ## Setup Instructions
 
-1. **Clone the repository:**
+Follow these steps to run TalentX AI locally:
 
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/talentx-ai.git
 cd talentx-ai
-Install dependencies:
+````
 
-bash
-Copy code
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-AWS Setup:
+```
 
-S3: Create a bucket to store portfolio files and voice logs.
+### 3. Configure AWS Services
 
-DynamoDB: Create a table to store chat history and agent states.
+TalentX AI requires AWS services:
 
-AWS Bedrock: Configure your Master and Sub-Agents using Bedrock.
+* **S3 Bucket:** Store portfolios, voice recordings, and generated content.
+* **DynamoDB Table:** Store chat history and agent state.
+* **AWS Bedrock Agents (Optional):** For Multi-Agent Chatbot:
 
-Environment Variables:
+  * Create **Master Agent** and **Sub-Agents** (Profile, Skill Mapping, Career Pathway, Portfolio).
+  * Configure each agent with instructions to handle its role.
+## Multi-Agent Instructions
 
-Create a .env file with the following:
+| Agent Type       | Agent Name          | Purpose / Role Description                                                                 | Example Instructions / Prompts                                                                 |
+|-----------------|-------------------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Master Agent** | Master Agent       | Routes user queries to appropriate sub-agents and compiles final responses.               | - Receive user input (text/voice). <br> - Decide which sub-agent(s) to query. <br> - Aggregate and return responses. |
+| **Sub-Agent**    | Profile Agent      | Handles user profile, personal info, and identity-related queries.                        | - Analyze user's profile details. <br> - Suggest career archetypes. <br> - Update profile state in DynamoDB. |
+| **Sub-Agent**    | Skill Mapping Agent | Maps user's skills, strengths, and interests to potential roles and career paths.         | - Evaluate user's skills. <br> - Suggest skill improvements or roles. <br> - Return structured data to Master Agent. |
+| **Sub-Agent**    | Career Pathway Agent | Suggests possible career paths, timelines, and learning steps based on user input.        | - Recommend career pathways based on profile/skills. <br> - Provide suggested milestones. |
+| **Sub-Agent**    | Portfolio Agent     | Manages portfolio-related queries, generates content, and stores assets in S3.           | - Save user-generated content, conversation logs, and portfolio files. <br> - Provide links or summaries of portfolio assets. |
 
-bash
-Copy code
-AWS_ACCESS_KEY_ID=<your-access-key>
-AWS_SECRET_ACCESS_KEY=<your-secret-key>
-AWS_REGION=<your-region>
-S3_BUCKET=<your-s3-bucket-name>
-DYNAMO_TABLE=<your-dynamodb-table-name>
-Run the app:
+> ⚠️ Note: These instructions are **example prompts**. You can further refine and expand the prompts for each agent based on your specific use case. Each agent must be created separately in AWS Bedrock, and the Master Agent routes queries but does not contain the sub-agent logic itself.
 
-bash
-Copy code
+> ⚠️ You must create your own AWS resources; the pre-built agents cannot be shared.
+
+### 5. Run the App
+
+```bash
 streamlit run app.py
-How It Works
-Navigation Tabs:
+```
 
-Home: Choose an avatar.
-
-Day-in-the-Life Simulation: Explore career simulations.
-
-Spark Hub: Explore identity, strengths, and confidence labs.
-
-Multi-Agent Chatbot: Interact with agents via text or voice.
-
-Multi-Agent Chatbot:
-
-Text Input: Users type queries to the Master Agent.
-
-Voice Input: Users speak; Amazon Transcribe converts speech to text, sent to Master Agent.
-
-Master Agent: Routes requests to sub-agents (Profile, Skill Mapping, Career Pathway, Portfolio).
-
-Sub-Agents: Process data and update DynamoDB/S3 as needed.
-
-Note: Users of this repo need to create their own Master and Sub-Agents on AWS Bedrock to fully replicate the Multi-Agent system.
+Open the URL in your terminal (usually `http://localhost:8501`) to access the platform.
 
