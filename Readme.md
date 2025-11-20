@@ -116,28 +116,29 @@ Here’s what the TalentX AI app looks like when running locally:
   <img src="Image/Spark.png" width="70%" />
 </p>
 
-#### 🎬 Experience
-<p align="center">
-  <img src="Image/EXP.png" width="70%" />
-</p>
-
 #### 🎮 Role Match
 <p align="center">
   <img src="Image/Role match.png" width="70%" />
 </p>
 
-#### ✨ Spark Hub
+#### 🎬 Experience
 <p align="center">
-  <img src="Image/Sparkhub.png" width="70%" />
+  <img src="Image/EXP.png" width="70%" />
 </p>
 
 #### 💡 Spark Hub – Weakness & Confidence Labs
 <p align="center">
-  <img src="Image/Sparkhub weakness.png" width="45%" />
-  <img src="Image/Sparkhub confidence.png" width="45%" />
+  
+  <img src="Image/Sparkhub confidence.png" width="50%" />
+  <img src="Image/Sparkhub weakness.png" width="50%" />
+</p>
+
+#### ✨ Spark Hub
+<p align="center">
+  <img src="Image/Sparkhub.png" width="100%" />
 </p>
 
 #### ✨ Multi Agent Chatbot
 <p align="center">
-  <img src="Image/Multi_agent_Chatbot.png" width="70%" />
+  <img src="Image/Multi_agent_Chatbot.png" width="100%" />
 </p>
