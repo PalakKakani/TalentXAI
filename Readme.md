@@ -101,3 +101,43 @@ streamlit run app.py
 
 Open the URL in your terminal (usually `http://localhost:8501`) to access the platform.
 
+### 5. App Preview (Screenshots)
+
+Here’s what the TalentX AI app looks like when running locally:
+### 5. App Preview (Screenshots)
+
+#### 🏠 Homepage
+<p align="center">
+  <img src="Image/Homepage.png" width="70%" />
+</p>
+
+#### ✨ Day-in-the-Life
+<p align="center">
+  <img src="Image/Spark.png" width="70%" />
+</p>
+
+#### 🎬 Experience
+<p align="center">
+  <img src="Image/EXP.png" width="70%" />
+</p>
+
+#### 🎮 Role Match
+<p align="center">
+  <img src="Image/Role match.png" width="70%" />
+</p>
+
+#### ✨ Spark Hub
+<p align="center">
+  <img src="Image/Sparkhub.png" width="70%" />
+</p>
+
+#### 💡 Spark Hub – Weakness & Confidence Labs
+<p align="center">
+  <img src="Image/Sparkhub weakness.png" width="45%" />
+  <img src="Image/Sparkhub confidence.png" width="45%" />
+</p>
+
+#### ✨ Multi Agent Chatbot
+<p align="center">
+  <img src="Image/Multi_agent_Chatbot.png" width="70%" />
+</p>
