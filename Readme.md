@@ -101,8 +101,6 @@ streamlit run app.py
 
 Open the URL in your terminal (usually `http://localhost:8501`) to access the platform.
 
-### 5. App Preview (Screenshots)
-
 Here’s what the TalentX AI app looks like when running locally:
 ### 5. App Preview (Screenshots)
 
