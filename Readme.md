@@ -108,29 +108,29 @@ Here’s what the TalentX AI app looks like when running locally:
 
 #### 🏠 Homepage
 <p align="center">
-  <img src="Image/Homepage.png" width="70%" />
+  <img src="Image/Homepage.png" width="100%" />
 </p>
 
 #### ✨ Day-in-the-Life
 <p align="center">
-  <img src="Image/Spark.png" width="70%" />
+  <img src="Image/Spark.png" width="100%" />
 </p>
 
 #### 🎮 Role Match
 <p align="center">
-  <img src="Image/Role match.png" width="70%" />
+  <img src="Image/Role match.png" width="100%" />
 </p>
 
 #### 🎬 Experience
 <p align="center">
-  <img src="Image/EXP.png" width="70%" />
+  <img src="Image/EXP.png" width="100%" />
 </p>
 
 #### 💡 Spark Hub – Weakness & Confidence Labs
 <p align="center">
   
-  <img src="Image/Sparkhub confidence.png" width="50%" />
-  <img src="Image/Sparkhub weakness.png" width="50%" />
+  <img src="Image/Sparkhub confidence.png" width="100%" />
+  <img src="Image/Sparkhub weakness.png" width="100%" />
 </p>
 
 #### ✨ Spark Hub
